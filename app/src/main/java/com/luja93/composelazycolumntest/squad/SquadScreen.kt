@@ -21,7 +21,7 @@ import com.luja93.composelazycolumntest.squad.viewholder.SquadViewType
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SquadScreen(items: List<AdapterItemWrapper>) {
-    Surface(modifier = Modifier.fillMaxSize()) {
+    Surface {
         LazyColumn(
             state = rememberLazyListState(),
             modifier = Modifier.fillMaxSize(),
