@@ -27,12 +27,6 @@ fun SquadPlayer(
     onPlayerClicked: () -> Unit,
 ) {
     Surface(
-        shape = when {
-            uiModel.isFirstInTable && uiModel.isLastInTable -> SquadTheme.shapes.allRounded
-            uiModel.isFirstInTable -> SquadTheme.shapes.topRounded
-            uiModel.isLastInTable -> SquadTheme.shapes.bottomRounded
-            else -> RectangleShape
-        },
         color = resolveTableRowColor(uiModel = uiModel.colorDefinition),
         modifier = Modifier.padding(horizontal = 12.dp)
     ) {
@@ -44,20 +38,7 @@ fun SquadPlayer(
                     onClick = { onPlayerClicked() },
                     enabled = uiModel.isClickable
                 )
-                .padding(
-                    start = 8.dp,
-                    end = 12.dp,
-                    top = when {
-                        uiModel.isFirstInTable && uiModel.playerShirtNumber.isNullOrEmpty() -> 16.dp
-                        uiModel.isFirstInTable -> 14.dp
-                        else -> 6.dp
-                    },
-                    bottom = when {
-                        uiModel.isLastInTable && uiModel.playerShirtNumber.isNullOrEmpty() -> 16.dp
-                        uiModel.isLastInTable -> 14.dp
-                        else -> 6.dp
-                    }
-                )
+                .padding(horizontal = 8.dp, vertical = 6.dp)
         ) {
             uiModel.playerShirtNumber?.let {
                 PlayerShirtNumber(shirtNumber = uiModel.playerShirtNumber)

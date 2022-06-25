@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ComposeLazyColumnTest"
-include ':app'
+include ':app', ':benchmark'

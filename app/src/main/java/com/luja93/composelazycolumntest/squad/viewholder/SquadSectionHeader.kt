@@ -1,14 +1,9 @@
 package com.luja93.composelazycolumntest.squad.viewholder
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import com.luja93.composelazycolumntest.common.ui.HorizontalFadingEdge
 import com.luja93.composelazycolumntest.common.ui.SectionHeader
 import com.luja93.composelazycolumntest.squad.model.ui.SectionHeaderUiModel
 
@@ -16,14 +11,8 @@ import com.luja93.composelazycolumntest.squad.model.ui.SectionHeaderUiModel
 fun SquadSectionHeader(
     uiModel: SectionHeaderUiModel,
 ) {
-    Column {
-        Surface(color = MaterialTheme.colors.background) {
-            SectionHeader(uiModel = uiModel)
-        }
-        HorizontalFadingEdge(
-            height = 6.dp,
-            modifier = Modifier.fillMaxWidth()
-        )
+    Surface(color = MaterialTheme.colors.background) {
+        SectionHeader(uiModel = uiModel)
     }
 }
 
@@ -33,8 +22,8 @@ fun SquadSectionHeader(
 private fun SoccerTeamDetailsSquadSectionHeaderPreview() {
     SectionHeader(
         uiModel = SectionHeaderUiModel(
-            title = "Attack"
-        )
+            title = "Attack",
+        ),
     )
 }
 //endregion

@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <color name="background">#ff151A1E</color>
+    <color name="surface">#ff1F2830</color>
+    <color name="primaryText">#ffCFD8E6</color>
+    <color name="secondaryText">#ff73818C</color>
+    <color name="darkerTableRow">#ff1A2229</color>
+    <color name="highlightedTableRow">#ff203836</color>
+    <color name="sectionHeaderTitle">@color/white</color>
+    <color name="shirtNumber">@color/white</color>
+    <color name="shirtNumberBorder">#ff2F3841</color>
 </resources>
